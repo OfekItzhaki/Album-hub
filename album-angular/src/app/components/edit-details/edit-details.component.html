@@ -1,0 +1,7 @@
+<div id="dialog">
+    <h1> Image ID: {{currentImg.id}} </h1>
+    <img src="http://localhost:5555/displayimages/{{currentImg.id}}">
+    <h3> From: {{currentImg.description}} </h3>
+    <app-favorite-indication [currentImg]="currentImg"></app-favorite-indication>
+    <app-private-indication [currentImg]="currentImg"></app-private-indication>
+</div>

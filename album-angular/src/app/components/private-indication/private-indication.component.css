@@ -1,0 +1,12 @@
+img {
+    width: auto;
+    height: auto;
+}
+
+.private {
+    /* background-image: url('../../../assets/images/icons/closed_lock.png') no-repeat center center fixed; */
+}
+
+.public {
+    /* background-image: url('../../../assets/images/icons/open_lock.png') no-repeat center center fixed; */
+}

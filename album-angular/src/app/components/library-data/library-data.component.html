@@ -1,0 +1,29 @@
+<div>
+    <form (ngSubmit)="onSubmit()" ngNativeValidate>
+        <ul>
+            <li>
+                <label for="items"> Choose a default view template: </label> <br>
+                <input type="text" [(ngModel)]="libraryName" [ngModelOptions]="{standalone: true}" placeholder="Library name" required/>
+            </li>
+
+            <li>
+                <label for="items"> Enter the description for the folder: </label> <br>
+                <input type="text" [(ngModel)]="description" [ngModelOptions]="{standalone: true}" placeholder="Description" required/>
+            </li>
+
+            <li>
+                <label for="items"> Choose a default view template: </label> <br>
+
+                <!-- The value for `for=""` and `id=""` has to be same. -->
+
+                <select id="viewTemplate" required>
+                    <option value="List"> List </option>
+                    <option value="Grid"> Grid </option>
+                </select>
+            </li>
+        </ul>
+                        <!-- Next should do the submit and then redirect ... -->
+        <input id="next" type="submit" name="Next" value="Next"/>
+    </form>
+</div>
+

@@ -1,0 +1,22 @@
+html,body{
+    height:100%
+}
+
+#container {
+    min-height: max-content;
+    width: max-content;
+    position: relative;
+    padding: 0px 20px;
+}
+
+#container:hover {
+    background-color: rgb(139, 93, 139);
+    border-radius: 2%;
+}
+
+
+#logo {
+    height: 70px;
+    width: 180px;
+    border-radius: 5%;
+}

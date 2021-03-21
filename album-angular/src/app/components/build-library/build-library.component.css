@@ -1,0 +1,20 @@
+
+.header {
+    text-decoration: 2px underline dashed;
+}
+
+.content {
+    max-width: 500px;
+    margin: 200px auto;
+    background: white;
+}
+
+.content * {
+    padding: 20px;
+    margin: 30px 0 50px 0;
+}
+
+div {
+    border: 2px solid;
+    text-align: center;
+}

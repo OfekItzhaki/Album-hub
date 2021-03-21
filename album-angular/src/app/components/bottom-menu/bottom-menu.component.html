@@ -1,0 +1,19 @@
+<mat-sidenav-container
+    class="example-container" (backdropClick)="closeMenu('backdrop')" *ngIf="shouldRun" [ngClass]="{'closed' : toggle, 'opened': !toggle}">
+  <mat-sidenav position="end" #sidenav (keydown.escape)="closeMenu('escape')" disableClose>
+    <app-logo id="logo"></app-logo>
+    <div>
+      <p><button mat-button (click)="closeMenu('toggle button')"> Close menu </button></p>
+      <p><button mat-button > Show images on list / grid </button></p>
+      <p><button mat-button (click)="goToSlideshow()"> Start random slideshow </button></p>
+      <p><button mat-button (click)="importObserve()"> import / observe images </button></p>
+      <p><button mat-button disabled> Share images </button></p>
+      <p><button mat-button disabled> Sync with cloud storage </button></p>
+    </div>
+  </mat-sidenav>
+
+  <mat-sidenav-content>
+    <p><button id="open" mat-button (click)="openMenu()"> Open </button></p>
+    <!-- <p> Closed due to: {{reason}} </p> -->
+  </mat-sidenav-content>
+</mat-sidenav-container>

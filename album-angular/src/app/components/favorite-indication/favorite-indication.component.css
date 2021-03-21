@@ -1,0 +1,12 @@
+img {
+    width: auto;
+    height: auto;
+}
+
+.unfav {
+     /* background-image: url('../../../assets/images/icons/white_star.png') no-repeat center center fixed; */
+}
+
+.fav {
+    /* background-image: url('../../../assets/images/icons/black_star.png') no-repeat center center fixed; */
+}

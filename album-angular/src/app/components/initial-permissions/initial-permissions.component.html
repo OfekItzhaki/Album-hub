@@ -1,0 +1,24 @@
+<div>
+    <form (ngSubmit)="onSubmit()" ngNativeValidate>
+        <ul class="content">
+            <h2 id="header"> Please choosen the apps permissions : </h2>
+
+            <li>
+                <input type="checkbox" name="Camera" [(ngModel)]="allowCamera" [ngModelOptions]="{standalone: true}"> Allow device camera <br>
+            </li>
+
+            <li>
+                <input type="checkbox" name="Location" [(ngModel)]="allowLocation" [ngModelOptions]="{standalone: true}"> Allow device location <br>
+            </li>
+
+            <li>
+                <input type="checkbox" name="Private" [(ngModel)]="privateMode" [ngModelOptions]="{standalone: true}"> Allow private mode <br>
+                <input type="password" name="Password" [(ngModel)]="privateKey" [ngModelOptions]="{standalone: true}" *ngIf="privateMode" required minlength="6"/>
+            </li>
+
+            <a id="fearnot"> Fear not, this can be changed if needed. </a>
+        </ul>
+
+        <input id="submit" type="submit" name="Next" value="Next"/>
+    </form>
+</div>

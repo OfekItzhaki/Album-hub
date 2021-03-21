@@ -1,0 +1,39 @@
+.closed {
+    position: fixed;
+    width: max-content;
+    height: max-content;
+
+    bottom: 50px;
+    right: 50px;
+
+    color: wheat;
+
+    background-color: #222;
+}
+
+.opened {
+    position: fixed;
+    width: auto;
+    height: auto;
+
+    top: 0px;
+    bottom: 0px;
+    left: 0px;
+    right: 0px;
+
+    background-color: transparent;
+}
+
+
+#logo {
+    border-bottom: 1px solid;
+}
+
+#open:hover {
+    color: black;   
+    background-color: rgb(139, 93, 139);
+}
+
+mat-sidenav-container {
+    position: 'start';
+}

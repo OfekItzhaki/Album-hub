@@ -1,0 +1,20 @@
+<div id="app">
+  <div><video #video id="video" width="640" height="480" autoplay></video></div>
+  <div>
+    <button id="snap" (click)="capture()" *ngIf="!snapPressed && !saveImage"> Snap Photo </button>
+
+    <div *ngIf="snapPressed">
+      <label> Keep snap? </label>
+      <button id="keep" (click)="keepSnap(true)"> Yes </button>
+      <button id="discard" (click)="keepSnap(false)"> No </button>
+    </div>
+
+    <div *ngIf="saveImage">
+      <label> Put in private folder? </label>
+      <button id="private" (click)="changePrivacy(true)"> Yes </button>
+      <button id="public" (click)="changePrivacy(false)"> No </button>
+    </div>
+    
+  </div>
+  <canvas #canvas id="canvas" width="640" height="480"></canvas>
+</div>

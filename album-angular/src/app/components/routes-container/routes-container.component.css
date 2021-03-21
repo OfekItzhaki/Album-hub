@@ -1,0 +1,27 @@
+#container {
+   text-align: center;
+   white-space: nowrap;
+   padding: 10px;
+}
+
+.btn {
+    height: 30px;
+    border: 1px solid;
+    border-radius: 5%;
+    padding: 20px;
+
+    color: wheat;
+    background-color: #222;
+    
+    text-align: center;
+    vertical-align: middle;
+}
+
+.btn:hover {
+    color: black;
+    background-color: rgb(139, 93, 139);
+}
+
+.btn:focus {
+    outline: none;
+}

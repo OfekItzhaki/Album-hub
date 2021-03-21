@@ -1,0 +1,6 @@
+<div id="container">
+    <input class="btn" type="button" value="Online images" (click)="routeClicked('onlineimages')"/>
+    <input class="btn" type="button" value="Public folder" (click)="routeClicked('publicfolder')"/>
+    <input class="btn" type="button" value="Camera" (click)="routeClicked('camera')"/>
+    <input class="btn" type="button" value="Private folder" *ngIf="correctKey" (click)="routeClicked('privatefolder')"/>
+</div>

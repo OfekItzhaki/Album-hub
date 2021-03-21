@@ -1,0 +1,33 @@
+.closed {
+    position: relative;
+
+    top: 0px;
+    left: 10px;
+
+    color: wheat;
+
+    background-color: #222;
+}
+
+.opened {
+    position: fixed;
+    width: auto;
+    height: auto;
+
+    top: 0px;
+    bottom: 0px;
+    left: 0px;
+    right: 0px;
+
+    background-color: transparent;
+}
+
+
+#logo {
+    border-bottom: 1px solid;
+}
+
+#open:hover {
+    color: black;   
+    background-color: rgb(139, 93, 139);
+}

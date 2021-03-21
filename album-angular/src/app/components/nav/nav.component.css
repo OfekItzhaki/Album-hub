@@ -1,0 +1,24 @@
+body {
+  margin: 0px;
+}
+
+#navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  overflow: hidden;
+  background-color: wheat;
+  position: initial;
+  top: 0px;
+  width: 100% - 2px;
+  border: 2px solid;
+}
+
+#logo {
+  position: initial;
+}
+
+#routes {
+  display: inline-block;
+}

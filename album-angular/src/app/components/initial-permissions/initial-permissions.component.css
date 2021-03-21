@@ -1,0 +1,15 @@
+
+div {
+    max-width: 500px;
+    margin: 200px auto;
+    background: white;
+    border: 2px solid;
+}
+
+#fearnot {
+    color: red;
+}
+
+ul {
+    list-style-type: none;
+}

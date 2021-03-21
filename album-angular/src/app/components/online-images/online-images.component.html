@@ -1,0 +1,37 @@
+<!-- <head>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+  <script src="../../../../../album-nodejs/scripts/blockRightClick.js"></script>
+</head> -->
+
+<div>
+  <ul>
+    <mat-label for="perPage"> Images per page: </mat-label>
+    <input id="perPage" type="number" [(ngModel)]="perPage" max="99" placeholder="Enter a number">
+  </ul>
+  <ul>
+    <li>
+      <input type="text" [(ngModel)]="searchByName" placeholder="Insert keyword">
+      <input type="button" value="Search by name" (click)="searchPhotos(searchByName)">
+    </li>
+  </ul>
+  <ul>
+    <li>
+      <!-- <input type="text" [(ngModel)]="searchData" placeholder="Insert keyword"> -->
+      <select id="categories" [(ngModel)]="searchByCategory">
+        <option *ngFor="let category of categories"> {{category}} </option>
+      </select>
+      <input type="button" value="Search by category" (click)="searchPhotos(searchByCategory)">
+    </li>
+  </ul>
+  <ul>
+    <!-- <input #imageInput hidden="true" type="file" onclick="this.value=null" (change)="onUpload()" accept="image/*"/> -->
+    <button *ngIf="uploadState" (click)="onClickUpload()"> Upload images ...</button>
+</ul>
+  <ul *ngFor="let d of data">
+    <!-- improve the design if possible -->
+    <li class="container">
+      <input type="checkbox" [attr.id]="d.id" class="checkbox hidden"/>
+      <label [attr.for]="d.id"><img src={{d.src.small}} /></label>
+    </li>
+  </ul>
+</div>

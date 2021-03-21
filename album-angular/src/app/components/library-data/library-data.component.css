@@ -1,0 +1,28 @@
+
+div {
+    max-width: fit-content;
+    margin: 200px auto;
+    background: white;
+    border: 2px solid;
+
+    display: grid;
+}
+
+#fearnot {
+    color: red;
+}
+
+ul {
+    margin: 30px 30px 30px auto;
+    /* list-style-type: none; */
+}
+
+li {
+    margin-bottom: 20px;
+}
+
+#next {
+    width: 100px;
+    position: relative;
+    left: 35%;
+}

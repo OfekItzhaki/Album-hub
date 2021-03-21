@@ -1,0 +1,14 @@
+#dialog {
+    text-align: center;
+}
+
+h1, h3 {
+    color: black;
+}
+
+img {
+    border: 2px solid wheat;
+    padding: 10px;
+    max-width: 635px;
+    max-height: 635px;
+}
