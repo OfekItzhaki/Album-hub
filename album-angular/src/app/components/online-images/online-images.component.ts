@@ -64,6 +64,12 @@ export class OnlineImagesComponent implements OnInit, OnDestroy {
     })
   }
 
+  onInput () {
+    if (this.perPage >= 50) {
+      this.perPage = 49;
+    }
+}
+
   onClickUpload() {
     console.log("upload images was clicked ..");
     let checkboxes = document.getElementsByClassName("checkbox");
@@ -94,32 +100,6 @@ export class OnlineImagesComponent implements OnInit, OnDestroy {
       }
     }
   }
-
-  // checkIfChecked() {
-  //   let checkboxes = document.getElementsByClassName("checkbox");
-  //   console.log("checking checked checkboxes ...");
-  //   console.log("-------------------------------");
-
-  //   for (let index = 0; index < checkboxes.length; index++) {
-  //     let checkbox = checkboxes[index] as HTMLInputElement;
-
-  //     if (checkbox.checked == true) {
-  //       // console.log("checked " + checkbox.id);
-  //       if (!(this.checkedArray.find(x => x == checkbox.id) == checkbox.id))
-  //         this.checkedArray.push(checkbox.id);
-  //     }
-      
-  //     else {
-  //       // console.log("unchecked " + checkbox.id);
-
-  //       if (this.checkedArray.find(x => x == checkbox.id) == checkbox.id)
-  //         this.checkedArray = this.checkedArray.splice(+checkbox.id);
-  //     }
-  //   }
-    
-  //   console.log("checkedArary length: " + this.checkedArray.length);
-  //   console.log("-------------------------------");
-  // }
 
   uploadBlob(blob: Blob): any {
     let reader = new FileReader();
@@ -154,6 +134,6 @@ export class OnlineImagesComponent implements OnInit, OnDestroy {
         }
         catch(err) {reject(err.message)}
     });
-}
+  }
 
 }

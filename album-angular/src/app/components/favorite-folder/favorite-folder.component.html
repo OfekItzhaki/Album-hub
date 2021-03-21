@@ -1,13 +1,8 @@
 <div id="container">
-    <div id="tableContainer-1">
-        <div id="tableContainer-2">
-            <table id="myTable" class="center">
-                <th *ngIf="favImages">
-                    <tr *ngFor="let image of favImages">
-                        <img src="http://localhost:5555/displayimages/{{image.id}}" (click)="openDialog(image)">
-                    </tr>
-                </th>
-            </table>
-        </div>
-    </div>
+    <ul *ngIf="favImages">
+        <li *ngFor="let image of favImages">
+            <img src="http://localhost:5555/displayimages/{{image.id}}" (click)="openDialog(image)">
+        </li>
+    </ul>
 </div>
+

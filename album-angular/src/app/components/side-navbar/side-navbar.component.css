@@ -4,9 +4,9 @@
     top: 0px;
     left: 10px;
 
-    color: wheat;
 
-    background-color: #222;
+
+    background-color: transparent;
 }
 
 .opened {
@@ -22,12 +22,40 @@
     background-color: transparent;
 }
 
+button:hover {
+    background-color: rgb(139, 93, 139);    
+}
+
+p button:hover {
+    width: 120%;
+    background-color: rgb(139, 93, 139);
+}
 
 #logo {
     border-bottom: 1px solid;
 }
 
+#close {
+    width: 75%;
+    height: 75%;
+}
+
+#close:hover {
+    width: 90%;
+    height: 90%;
+}
+
+#open {
+    width: 75%;
+    height: 75%;
+}
+
 #open:hover {
-    color: black;   
-    background-color: rgb(139, 93, 139);
+    width: 90%;
+    height: 90%;
+}
+
+.container {
+    max-width:max-content;
+    
 }

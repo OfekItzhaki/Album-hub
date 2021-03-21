@@ -8,11 +8,11 @@ body {
   align-items: center;
 
   overflow: hidden;
-  background-color: wheat;
+  background-color: lightgray;
   position: initial;
   top: 0px;
-  width: 100% - 2px;
-  border: 2px solid;
+  width: 100%;
+  border-bottom: 1px solid;
 }
 
 #logo {

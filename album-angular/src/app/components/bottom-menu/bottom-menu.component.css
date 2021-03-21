@@ -6,9 +6,7 @@
     bottom: 50px;
     right: 50px;
 
-    color: wheat;
-
-    background-color: #222;
+    background-color: transparent;
 }
 
 .opened {
@@ -24,16 +22,40 @@
     background-color: transparent;
 }
 
+p button:hover {
+    width: 120%;
+    background-color: rgb(139, 93, 139);
+}
 
 #logo {
     border-bottom: 1px solid;
 }
 
-#open:hover {
-    color: black;   
-    background-color: rgb(139, 93, 139);
+#close {
+    width: 65%;
+    height: 65%;
 }
 
-mat-sidenav-container {
-    position: 'start';
+#close:hover {
+    width: 80%;
+    height: 80%;
+}
+
+#open {
+    width: 100%;
+    height: 100%;
+}
+
+#open:hover {
+    width: 110%;
+    height: 110%;
+}
+
+.container {
+    max-width:max-content;
+    
+}
+
+mat-button {
+    text-align: center;
 }

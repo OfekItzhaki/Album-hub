@@ -1,3 +1,7 @@
+html {
+
+}
+
 .noselect {
   -moz-user-select: none;
   -khtml-user-select: none;
@@ -13,20 +17,19 @@
   } */
 
   mat-label {
-    color: white;
+    color: black;
   }
 
   #perPage {
     width: 40px;
   }
 
-  .container {
-    /* position: relative; 
-    display: inline-block;
-    display: -moz-inline-box;
-    *display: inline;
-    zoom: 1;
-    text-align: center; */
+  #container {
+    position: sticky;
+    text-align: center;
+    max-width: 400px;
+    max-height: 400px;
+    left: 38%;
   }
 
   .hidden {
@@ -46,7 +49,7 @@
   }
   
   label {
-    border: 1px solid #fff;
+    border: 2px groove;
     border-radius: 2%;
     padding: 10px;
     display: block;
@@ -81,28 +84,25 @@
   }
 
   label:hover{
-    border-color: wheat;
+    border: 2px solid black;
   }
   
   :checked + label {
-    /* padding: 20px;
-    left: -10px; */
     border-radius: 10%;
     border-width: 2px;
-    border-color: wheat;
   }
   
   :checked + label:before {
-    left: +100px;
+    left: +110px;
     content: "✓";
-    color: wheat;
-    background-color: gray;
-    border: wheat;
+    color: whitesmoke;
+    background-color: black;
+    border: whitesmoke;
     transform: scale(1);
   }
   
   :checked + label img {
     transform: scale(0.9);
-    box-shadow: 0 0 5px wheat;
+    box-shadow: 0 0 5px black;
     z-index: -1;
   }

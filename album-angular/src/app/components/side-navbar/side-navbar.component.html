@@ -3,8 +3,8 @@
   <mat-sidenav #sidenav (keydown.escape)="closeSidebar('escape')" disableClose>
     <app-logo id="logo"></app-logo>
     <div>
-      <p><button mat-button (click)="closeSidebar('toggle button')"> Close menu </button></p>
-      <p><button mat-button > Application theme - light / dark </button></p>
+      <p><button mat-button class="container" (click)="closeSidebar('toggle button')"> <img id="close" src="../../../assets/images/icons/open_menu.png"/> </button></p>
+      <p><button mat-button > light / dark </button></p>
       <p><button mat-button (click)="privateMode()" > Enter / exit private mode </button></p>
       <p><button mat-button > Edit categories </button></p>
       <p><button mat-button (click)="aboutClicked()"> About </button></p>
@@ -13,7 +13,7 @@
   </mat-sidenav>
 
   <mat-sidenav-content>
-    <p><button id="open" mat-button (click)="openSidebar()"> Open </button></p>
+    <button class="container" mat-button (click)="openSidebar()"> <img id="open" src="../../../assets/images/icons/closed_menu.png"/> </button>
     <!-- <p> Closed due to: {{reason}} </p> -->
   </mat-sidenav-content>
 </mat-sidenav-container>

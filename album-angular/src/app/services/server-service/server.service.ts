@@ -20,7 +20,11 @@ export class ServerService {
   private keySource = new BehaviorSubject("");
   keyState = this.keySource.asObservable();
 
+
+  
   constructor( private http: HttpClient, private router: Router ) { }
+
+
 
   editCamera(allowCamera: boolean) {
     this.cameraSource.next(allowCamera)
@@ -55,19 +59,6 @@ export class ServerService {
     })
   }
 
-  // checkIfFolderExists() {
-  //   let resBool = false;
-  //   this.http
-  //   .get('http://localhost:5555/folderexists').subscribe((res) => {
-
-  //     console.log("checking if folder exists");
-  //     resBool = res as boolean;
-
-  //     console.log(resBool + " - inside");
-  //     return resBool;
-  //   })
-  // }
-
 
   checkIfFolderExists() {                       // might work on it a bit more
     let resBool = false;
@@ -86,6 +77,6 @@ export class ServerService {
         this.router.navigate(['onlineimages']);
       }
     })
-    console.log("resBool is" + resBool) // TRUE
+    console.log("resBool is" + resBool)
   }
 }

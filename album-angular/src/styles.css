@@ -10,7 +10,7 @@ html, body {
 body {
     margin: 0;
     font-family: Arial, Helvetica, sans-serif;
-    background-color: #3a3a3a;
+    background-color: white;
 }
 
 /* Overwrite the styles of the mat-dialog-container element globally, but only for those

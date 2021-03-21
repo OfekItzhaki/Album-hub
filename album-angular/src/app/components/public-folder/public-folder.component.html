@@ -3,15 +3,9 @@
         <input #imageInput hidden="true" type="file" onclick="this.value=null" (change)="onFileSelected($event)" accept="image/*"/>
         <button *ngIf="uploadState" (click)="imageInput.click()"> Upload image ...</button>
     </ul>
-    <div id="tableContainer-1">
-        <div id="tableContainer-2">
-            <table id="myTable" class="center">
-                <th *ngIf="publicImages">
-                    <tr *ngFor="let image of publicImages">
-                        <img src="http://localhost:5555/displayimages/{{image.id}}" (click)="openDialog(image)">
-                    </tr>
-                </th>
-            </table>
-        </div>
-    </div>
+    <ul *ngIf="publicImages">
+        <li *ngFor="let image of publicImages">
+            <img src="http://localhost:5555/displayimages/{{image.id}}" (click)="openDialog(image)">
+        </li>
+    </ul>
 </div>

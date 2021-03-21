@@ -7,8 +7,7 @@ h1, h3 {
 }
 
 img {
-    border: 2px solid wheat;
-    padding: 10px;
+    border: 2px solid black;
     max-width: 635px;
     max-height: 635px;
 }

@@ -3,10 +3,10 @@
   <script src="../../../../../album-nodejs/scripts/blockRightClick.js"></script>
 </head> -->
 
-<div>
+<div id="container">
   <ul>
     <mat-label for="perPage"> Images per page: </mat-label>
-    <input id="perPage" type="number" [(ngModel)]="perPage" max="99" placeholder="Enter a number">
+    <input id="perPage" type="number" (ngModelChange)="onInput()" [(ngModel)]="perPage" max="50" placeholder="Enter a number">
   </ul>
   <ul>
     <li>
@@ -29,7 +29,7 @@
 </ul>
   <ul *ngFor="let d of data">
     <!-- improve the design if possible -->
-    <li class="container">
+    <li>
       <input type="checkbox" [attr.id]="d.id" class="checkbox hidden"/>
       <label [attr.for]="d.id"><img src={{d.src.small}} /></label>
     </li>

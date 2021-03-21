@@ -2,40 +2,18 @@ html, body {
     height: 100%;
   }
 
-#tableContainer-1 {
-height: 100%;
-width: 100%;
-display: table;
-}
 
-#tableContainer-2 {
-vertical-align: middle;
-display: table-cell;
-height: 100%;
-}
-
-#myTable {
-margin: 0 auto;
-}
-
-div {
+#container {
+    position: sticky;
+    text-align: center;
     max-width: 400px;
     max-height: 400px;
-}
-
-table.center {
-    margin-left:auto; 
-    margin-right:auto;
+    left: 38%;
 }
 
 div img {
-    /* max-width: max-content;
-    margin-left: 0px;
-    margin-right: auto; */
-
-    border: 2px solid wheat;
+    border: 1px solid black;
     border-radius: 2%;
-    padding: 5px;
 
     width: 100%;
     object-fit: contain;
