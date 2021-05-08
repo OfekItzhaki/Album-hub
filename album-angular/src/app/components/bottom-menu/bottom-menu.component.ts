@@ -75,5 +75,7 @@ export class BottomMenuComponent implements OnInit, OnDestroy {
     console.log(this.uploadState);
     this.localImagesService.editUploadState(!this.uploadState);
     console.log(this.uploadState);
+
+    this.closeMenu('toggle button');
   }
 }

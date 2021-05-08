@@ -390,7 +390,7 @@ app.get("/checkkey/:id", (req, res) => {
 });
 
 app.post("/update", (req, res) => {
-  let recievedImg = req.body.image;
+  let receivedImg = req.body.image;
   let newPrivate = req.body.private;
   let newFavorite = req.body.favorite;
   let allImages = getImages(null);
@@ -401,7 +401,7 @@ app.post("/update", (req, res) => {
   console.log("recived img fav: " + newFavorite);
   
   for (let index = 0; index < allImages.length; index++) {
-    if (allImages[index].id == recievedImg.id) {
+    if (allImages[index].id == receivedImg.id) {
       path = jsonFilesPath + "\\" + allImages[index].id + ".json";
 
       console.log("previous private: " + allImages[index].private);
@@ -420,14 +420,35 @@ app.post("/update", (req, res) => {
 
       fs.writeFileSync(path, JSON.stringify(allImages[index]));
 
-      res.send("img updated - " + recievedImg.id);
-      console.log("img updated - " + recievedImg.id);
+      res.send("img updated - " + receivedImg.id);
+      console.log("img updated - " + receivedImg.id);
 
       console.log("-------------------------------------------------------");
     }
   }
   
   res.send("operation failed");
+});
+
+
+
+// deletes a specific image
+app.post("/removeimage", (req, res) => {
+  let receivedImg = req.body.id;
+  let imagePath = imagesDirPath + `\\${receivedImg}.png`;
+  let jsonPath = jsonFilesPath + `\\${receivedImg}.json`;
+  
+  fs.rm(imagePath, function (err) {
+    if (err) {
+      console.log(err);
+    } else {
+      console.log("image removed");
+      res.send("image removed");
+
+      fs.rm(jsonPath, function (err) {
+      });
+    }
+  });
 });
 
 

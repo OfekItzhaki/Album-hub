@@ -41,7 +41,7 @@ export class OnlineImagesComponent implements OnInit, OnDestroy {
   searchByName: string = "";
   searchByCategory: string = this.categories[0];
   perPage: number = 10;
-  data: HTMLImageElement[] = [];
+  data: any[] = [];
 
   // checkedArray: string[] = [];
   blobArray: Blob[] = [];
@@ -80,13 +80,19 @@ export class OnlineImagesComponent implements OnInit, OnDestroy {
       if (checkbox.checked == true &&
           this.data[index].id == checkbox.id) {
 
-            // console.log("data: " + this.data[index].id + " place: " + index);
-            // console.log("checkedArray: " + checkbox.id + " place: " + index);
 
             let file = this.data[index];
             let blobFile: any = null;
 
-            this.loadXHR(`${file.src.small}`).then(function(blob) { // -------- ASYNC AWAIT instead of then
+            let source;
+            if (file.src.original) { // case the file is any file and has the original size
+              source = file.src.original;
+            }
+            else { // case the file is a html element and has only the small size
+              source = file.src.small;
+            }
+
+            this.loadXHR(`${source}`).then(function(blob) { // -------- ASYNC AWAIT instead of then
               // here the image is a blob
               blobFile = blob as Blob;
             });

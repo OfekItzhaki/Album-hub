@@ -16,7 +16,6 @@
   </ul>
   <ul>
     <li>
-      <!-- <input type="text" [(ngModel)]="searchData" placeholder="Insert keyword"> -->
       <select id="categories" [(ngModel)]="searchByCategory">
         <option *ngFor="let category of categories"> {{category}} </option>
       </select>
@@ -28,10 +27,9 @@
     <button *ngIf="uploadState" (click)="onClickUpload()"> Upload images ...</button>
 </ul>
   <ul *ngFor="let d of data">
-    <!-- improve the design if possible -->
     <li>
       <input type="checkbox" [attr.id]="d.id" class="checkbox hidden"/>
-      <label [attr.for]="d.id"><img src={{d.src.small}} /></label>
+      <label [attr.for]="d.id"><img src={{d.src.original}}/></label>
     </li>
   </ul>
 </div>

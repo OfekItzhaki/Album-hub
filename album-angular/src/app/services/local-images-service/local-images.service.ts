@@ -68,7 +68,7 @@ export class LocalImagesService {
 
   getFavoritePublicImages(id: string) {
     console.log("getting favorite public images.. ");
-    this.http.get(`http://localhost:5555/favimages/${id}`).subscribe((res: any) => {
+    this.http.get(`http://localhost:5555/favimages`).subscribe((res: any) => {
       this.editPublicImgs(res);
     })
   }
@@ -83,6 +83,14 @@ export class LocalImagesService {
   updatePropertiesOfImage(img: any, priv: any, fav: any) {
     this.http
     .post('http://localhost:5555/update', { image: img, private: priv, favorite: fav }, { responseType: 'text' })
+    .subscribe((res) => {
+      console.log(res);
+    });
+  }
+
+  removeImage(id: number) {
+    this.http
+    .post('http://localhost:5555/removeimage', { id: id }, { responseType: 'text' })
     .subscribe((res) => {
       console.log(res);
     });

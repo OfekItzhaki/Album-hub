@@ -67,7 +67,7 @@ export class LibraryDataComponent implements OnInit, OnDestroy {
   }
 
   JumpToApplication() {
-    this.router.navigate(['/localmachine']);
+    this.router.navigate(['/publicfolder']);
   }
 
 }

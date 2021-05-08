@@ -1,0 +1,10 @@
+<ng-container class="vertical">
+    <button (click)="toggleState()"><img [src]="source"/></button>
+    <ng-container *ngIf="toggle">
+        <label id="label" > delete the image ? </label>
+        <button (click)="remove()"> Yes </button>
+        <button (click)="cancel()"> No </button>
+    </ng-container>
+</ng-container>
+<!-- [ngClass]="{'unpressed' : toggle, 'pressed': !toggle}" -->
+

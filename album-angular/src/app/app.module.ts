@@ -28,6 +28,7 @@ import { FavoriteIndicationComponent } from './components/favorite-indication/fa
 import { MatDialogModule } from '@angular/material/dialog';
 import { MaterialModule } from './modules/material-module/material-module.module';
 import { FavoriteFolderComponent } from './components/favorite-folder/favorite-folder.component';
+import { RemoveSpecificImageComponent } from './components/remove-specific-image/remove-specific-image.component';
 
 @NgModule({
   declarations: [
@@ -53,6 +54,7 @@ import { FavoriteFolderComponent } from './components/favorite-folder/favorite-f
     FavoriteIndicationComponent,
     SlideshowComponent,
     FavoriteFolderComponent,
+    RemoveSpecificImageComponent,
   ],
   imports: [
     // the dependencies modules
